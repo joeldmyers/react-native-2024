@@ -1,18 +1,21 @@
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, SafeAreaView } from "react-native";
 
 const App = () => {
-    return <View style={styles.container}>
-        <Text>Foo</Text>
-    </View>
+    return <SafeAreaView style={styles.container}>
+        <Text style={styles.headerText}>Hello Dorothee!</Text>
+    </SafeAreaView>
 }
 
 const styles = StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: "green",
+      backgroundColor: "blue",
       alignItems: "center",
       justifyContent: "center",
     },
+    headerText: {
+        fontSize: 64
+    }
   });
 
 export default App;
