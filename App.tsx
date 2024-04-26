@@ -16,7 +16,7 @@ const App = () => {
         <ColorBox colorName="Blue" hexCode="#268bd2"/>
         <ColorBox colorName="Magenta" hexCode="#d33682"/>
         <ColorBox colorName="Orange" hexCode="#cb4b16"/>
-        <FlatList data={FOODS} keyExtractor={item => item} renderItem={data => <Text>{data.item}</Text>} />
+        <FlatList data={FOODS} keyExtractor={item => item} renderItem={data => <Text style={styles.bodyText}>{data.item}</Text>} />
     </SafeAreaView>
 }
 
@@ -35,6 +35,10 @@ const styles = StyleSheet.create({
         fontSize: 24,
         color: '#202020'
     },
+    bodyText: {
+        fontSize: 18,
+        padding: 10
+    }
   });
 
 export default App;
