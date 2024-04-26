@@ -27,3 +27,9 @@ https://styled-components.com/docs/basics#react-native
 can do multiple styles by passing in array (for cascading styles)
 
 Colors can look different on iOS and android. Esp greens for some reason.
+
+Never use 'map' to render array of items. This is for performance reasons.
+
+Instead, use FlatList and SectionList.
+https://reactnative.dev/docs/flatlist
+https://reactnative.dev/docs/sectionlist
