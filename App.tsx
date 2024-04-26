@@ -1,5 +1,13 @@
-import { StyleSheet, Text, View, SafeAreaView } from "react-native";
+import { StyleSheet, Text, View, SafeAreaView, FlatList } from "react-native";
 import ColorBox from "./components/ColorBox";
+
+
+const FOODS = [
+    'apple',
+    'broccoli',
+    'burrito',
+    'pear'
+];
 
 const App = () => {
     return <SafeAreaView style={styles.container}>
@@ -8,6 +16,7 @@ const App = () => {
         <ColorBox colorName="Blue" hexCode="#268bd2"/>
         <ColorBox colorName="Magenta" hexCode="#d33682"/>
         <ColorBox colorName="Orange" hexCode="#cb4b16"/>
+        <FlatList data={FOODS} keyExtractor={item => item} renderItem={data => <Text>{data.item}</Text>} />
     </SafeAreaView>
 }
 
