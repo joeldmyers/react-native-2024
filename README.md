@@ -23,3 +23,5 @@ Everything is flex.
 Can use styled components! 
 
 https://styled-components.com/docs/basics#react-native
+
+can do multiple styles by passing in array (for cascading styles)
