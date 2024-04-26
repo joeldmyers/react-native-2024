@@ -1,4 +1,5 @@
 import { StyleSheet, Text, View, SafeAreaView } from "react-native";
+import ColorBox from "./components/ColorBox";
 
 const App = () => {
     return <SafeAreaView style={styles.container}>
@@ -7,6 +8,7 @@ const App = () => {
         <View style={[styles.buttonDiv, styles.blue]}><Text style={styles.buttonText}>Blue</Text></View>
         <View style={[styles.buttonDiv, styles.blue]}><Text style={styles.buttonText}>Magenta</Text></View>
         <View style={[styles.buttonDiv, styles.orange]}><Text style={styles.buttonText}>Orange</Text></View>
+        <ColorBox />
     </SafeAreaView>
 }
 
