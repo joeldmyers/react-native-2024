@@ -10,11 +10,12 @@ const styles = StyleSheet.create({
     container: {
       flex: 1,
       backgroundColor: "blue",
-      alignItems: "center",
+      alignItems: 'center',
       justifyContent: "center",
     },
     headerText: {
-        fontSize: 64
+        fontSize: 64,
+        color: '#202020'
     }
   });
 

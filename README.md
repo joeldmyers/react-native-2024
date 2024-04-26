@@ -17,3 +17,9 @@ Can do debugger to see console.log
 Native styles don't have units. E.g., padding margin.
 
 https://reactnative.dev/docs/view-style-props
+
+Everything is flex.
+
+Can use styled components! 
+
+https://styled-components.com/docs/basics#react-native
