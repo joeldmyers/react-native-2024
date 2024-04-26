@@ -3,12 +3,11 @@ import ColorBox from "./components/ColorBox";
 
 const App = () => {
     return <SafeAreaView style={styles.container}>
-        <View style={styles.header}><Text style={styles.buttonText}>Here are some boxes of different colors</Text></View>
-        <View style={[styles.buttonDiv, styles.cyan]}><Text style={styles.buttonText}>Cyan</Text></View>
-        <View style={[styles.buttonDiv, styles.blue]}><Text style={styles.buttonText}>Blue</Text></View>
-        <View style={[styles.buttonDiv, styles.blue]}><Text style={styles.buttonText}>Magenta</Text></View>
-        <View style={[styles.buttonDiv, styles.orange]}><Text style={styles.buttonText}>Orange</Text></View>
-        <ColorBox />
+        <View style={styles.header}><Text style={styles.headerText}>Here are some boxes of different colors</Text></View>
+        <ColorBox colorName="Cyan" hexCode="#2aa198"/>
+        <ColorBox colorName="Blue" hexCode="#268bd2"/>
+        <ColorBox colorName="Magenta" hexCode="#d33682"/>
+        <ColorBox colorName="Orange" hexCode="#cb4b16"/>
     </SafeAreaView>
 }
 
@@ -24,34 +23,9 @@ const styles = StyleSheet.create({
         marginTop: 30
     },
     headerText: {
-        fontSize: 64,
+        fontSize: 24,
         color: '#202020'
     },
-    buttonDiv: {
-        padding: 20,
-        width: '100%',
-        marginVertical: 10,
-        justifyContent: 'center',
-        alignItems: 'center'
-
-    },
-    cyan: {
-        backgroundColor: '#2aa198',
-    },
-    blue: {
-        backgroundColor: '#268bd2'
-    },
-    magenta: {
-        backgroundColor: '#d33682'
-    },
-    orange: {
-        backgroundColor: '#cb4b16'
-    },
-    buttonText: {
-        fontSize: 20,
-        fontWeight: 'bold',
-        color: '#fff',
-    }
   });
 
 export default App;
