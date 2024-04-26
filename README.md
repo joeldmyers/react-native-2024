@@ -4,7 +4,7 @@ Notes
 
 - View is like div
 - Scrollview - like div that you can scroll
-- Text - you have to wrap it to get text.
+- Text - you have to wrap element in text to get text.
 
 Use expo
 
