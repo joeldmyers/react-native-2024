@@ -33,3 +33,5 @@ Never use 'map' to render array of items. This is for performance reasons.
 Instead, use FlatList and SectionList.
 https://reactnative.dev/docs/flatlist
 https://reactnative.dev/docs/sectionlist
+
+section list is like a list that has a title and then sections.
