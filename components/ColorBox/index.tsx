@@ -1,12 +1,8 @@
 import { View, Text, StyleSheet } from "react-native";
 import { FC } from "react";
+import { Props } from "./types";
 
-interface IProps {
-  colorName: string;
-  hexCode: string;
-}
-
-const ColorBox: FC<IProps> = ({ colorName, hexCode }) => {
+const ColorBox: FC<Props> = ({ colorName, hexCode }) => {
   return (
     <View style={[styles.buttonDiv, { backgroundColor: hexCode }]}>
       <Text style={styles.buttonText}>{colorName}</Text>
