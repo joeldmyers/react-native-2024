@@ -75,3 +75,8 @@ Two main kinds of nav:
 - stack
 
 With web you use onClick, with mobile, we press, use touch. TouchableOpacity, TouchableWithoutFeedback, etc.
+
+### Testing
+
+E2E - Detox
+Unit Testing: React Native Testing Library
