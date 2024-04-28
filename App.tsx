@@ -7,7 +7,12 @@ import ColorPalette from "./screens/ColorPalette";
 
 import { createStackNavigator } from "@react-navigation/stack";
 
-const Stack = createStackNavigator();
+export type RootStackParamList = {
+  Home: undefined; // undefined because we aren't passing any params to the home screen
+  ColorPalette: undefined;
+};
+
+const Stack = createStackNavigator<RootStackParamList>();
 
 const App = () => {
   return (
