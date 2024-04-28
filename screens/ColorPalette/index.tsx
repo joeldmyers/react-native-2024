@@ -1,19 +1,17 @@
 import { FlatList, SafeAreaView, View, Text, StyleSheet } from "react-native";
 import ColorBox from "../../components/ColorBox";
-import { FIRST_COLORS } from "./consts";
 
-const ColorPalette = () => {
+const ColorPalette = ({ route }) => {
+  const { colors, paletteName } = route.params;
   return (
     <>
       <SafeAreaView style={styles.container}>
         <View style={styles.header}>
-          <Text style={styles.headerText}>
-            Here are some boxes of different colors
-          </Text>
+          <Text style={styles.headerText}>{paletteName}</Text>
         </View>
         <FlatList
           style={{ width: "100%" }}
-          data={FIRST_COLORS}
+          data={colors}
           keyExtractor={(item) => item.colorName}
           renderItem={(data) => (
             <ColorBox

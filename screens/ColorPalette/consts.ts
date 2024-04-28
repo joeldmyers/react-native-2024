@@ -1,6 +1,6 @@
 import { Color } from "./types";
 
-export const FIRST_COLORS: Color[] = [
+export const SOLARIZED: Color[] = [
   { colorName: "Base03", hexCode: "#002b36" },
   { colorName: "Base02", hexCode: "#073642" },
   { colorName: "Base01", hexCode: "#586e75" },
