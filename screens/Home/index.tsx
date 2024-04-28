@@ -12,7 +12,8 @@ import PalettePreview from "../../components/PalettePreview";
 import { ColorPalette } from "../ColorPalette/types";
 import { TouchableOpacity } from "react-native-gesture-handler";
 
-const Home = ({ navigation }: Props) => {
+const Home = ({ navigation, route }: Props) => {
+  const newColorPalette = route?.params?.newColorPalette ?? undefined;
   const [colorPalettes, setColorPalettes] = useState<ColorPalette[]>([]);
   const [isRefreshing, setIsRefreshing] = useState<boolean>(true);
 
