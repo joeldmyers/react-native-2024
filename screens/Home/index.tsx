@@ -1,5 +1,12 @@
 import { useState, useEffect } from "react";
-import { View, StyleSheet, FlatList, RefreshControl, Text } from "react-native";
+import {
+  View,
+  StyleSheet,
+  FlatList,
+  RefreshControl,
+  Text,
+  Button,
+} from "react-native";
 import { Props } from "./types";
 import PalettePreview from "../../components/PalettePreview";
 import { ColorPalette } from "../ColorPalette/types";
@@ -52,7 +59,7 @@ const Home = ({ navigation }: Props) => {
           <TouchableOpacity
             onPress={() => navigation.navigate("ColorPaletteModal")}
           >
-            <Text>Launch Modal</Text>
+            <Button title="Launch Modal" />
           </TouchableOpacity>
         }
       />
