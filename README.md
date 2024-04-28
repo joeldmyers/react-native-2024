@@ -80,3 +80,7 @@ With web you use onClick, with mobile, we press, use touch. TouchableOpacity, To
 
 E2E - Detox
 Unit Testing: React Native Testing Library
+
+### Forms
+
+Can use TextInput
