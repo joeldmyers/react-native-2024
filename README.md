@@ -37,3 +37,11 @@ https://reactnative.dev/docs/sectionlist
 section list is like a list that has a title and then sections.
 
 it seems like flatlist is a replacement for map generally.
+
+## Navigation
+
+React navigation and react native navigation are two nav libraries. React native doesn't have built-in navigation.
+
+https://reactnative.dev/docs/navigation
+
+They recommend starting with react navigation.
