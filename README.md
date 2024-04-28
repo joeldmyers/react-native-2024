@@ -20,7 +20,7 @@ https://reactnative.dev/docs/view-style-props
 
 Everything is flex.
 
-Can use styled components! 
+Can use styled components!
 
 https://styled-components.com/docs/basics#react-native
 
@@ -35,3 +35,5 @@ https://reactnative.dev/docs/flatlist
 https://reactnative.dev/docs/sectionlist
 
 section list is like a list that has a title and then sections.
+
+it seems like flatlist is a replacement for map generally.
