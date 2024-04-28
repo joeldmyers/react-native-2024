@@ -5,10 +5,23 @@ import {
   TextInput,
   StyleSheet,
   TouchableOpacity,
+  Alert,
 } from "react-native";
 
 const ColorPaletteModal = () => {
   const [name, setName] = useState("");
+
+  const handleSubmit = () => {
+    if (!name) {
+      Alert.alert("Please enter a palette name");
+    } else {
+      const newColorPalette = {
+        paletteName: name,
+        colors: [],
+      };
+      Alert.alert("Palette Name", name);
+    }
+  };
 
   return (
     <View style={styles.container}>
@@ -19,7 +32,7 @@ const ColorPaletteModal = () => {
         onChangeText={setName}
         placeholder="Palette Name"
       />
-      <TouchableOpacity style={styles.button}>
+      <TouchableOpacity style={styles.button} onPress={handleSubmit}>
         <Text style={styles.buttonText}>Submit</Text>
       </TouchableOpacity>
     </View>
