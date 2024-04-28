@@ -29,7 +29,6 @@ const Home = ({ navigation, route }: Props) => {
         "https://color-palette-api.kadikraman.vercel.app/palettes",
       );
       const resultJson = await result.json();
-      console.log("RESULTS!", resultJson);
       setColorPalettes(resultJson);
       setIsRefreshing(false);
     };
@@ -78,6 +77,12 @@ const styles = StyleSheet.create({
   headerText: {
     fontSize: 32,
     color: "blue",
+  },
+  buttonText: {
+    fontSize: 18,
+    fontWeight: "bold",
+    color: "teal",
+    marginBottom: 10,
   },
 });
 
