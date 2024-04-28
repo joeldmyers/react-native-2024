@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
-import { View, StyleSheet, FlatList } from "react-native";
+import { View, StyleSheet, FlatList, RefreshControl } from "react-native";
 import { Props } from "./types";
-import { ALL_COLORS } from "../ColorPalette/consts";
 import PalettePreview from "../../components/PalettePreview";
 import { ColorPalette } from "../ColorPalette/types";
 
@@ -37,6 +36,12 @@ const Home = ({ navigation }: Props) => {
             colorPalette={data.item}
           />
         )}
+        refreshControl={
+          <RefreshControl
+            refreshing={!colorPalettes?.length}
+            onRefresh={() => {}}
+          />
+        }
       />
     </View>
   );
