@@ -1,12 +1,12 @@
 import { FlatList, SafeAreaView, View, Text, StyleSheet } from "react-native";
 import ColorBox from "../../components/ColorBox";
 import { RouteProp } from "@react-navigation/native";
-import { RootStackParamList } from "../../types";
+import { MainStackParamList, RootStackParamList } from "../../types";
 
 const ColorPalette = ({
   route,
 }: {
-  route: RouteProp<RootStackParamList, "ColorPalette">;
+  route: RouteProp<MainStackParamList, "ColorPalette">;
 }) => {
   const { colors, paletteName } = route.params;
   return (

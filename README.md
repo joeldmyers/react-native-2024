@@ -84,3 +84,15 @@ Unit Testing: React Native Testing Library
 ### Forms
 
 Can use TextInput
+
+https://reactnative.dev/docs/textinput
+
+Picker - looks very different on iOS vs Android.
+
+Switch is toggle.
+
+### React Native Community
+
+Reliable 3rd party things.
+
+https://github.com/react-native-community

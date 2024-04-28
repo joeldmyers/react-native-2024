@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
-import { View, StyleSheet, FlatList, RefreshControl } from "react-native";
+import { View, StyleSheet, FlatList, RefreshControl, Text } from "react-native";
 import { Props } from "./types";
 import PalettePreview from "../../components/PalettePreview";
 import { ColorPalette } from "../ColorPalette/types";
+import { TouchableOpacity } from "react-native-gesture-handler";
 
 const Home = ({ navigation }: Props) => {
   const [colorPalettes, setColorPalettes] = useState<ColorPalette[]>([]);
@@ -46,6 +47,13 @@ const Home = ({ navigation }: Props) => {
             refreshing={isRefreshing}
             onRefresh={() => setIsRefreshing(true)}
           />
+        }
+        ListHeaderComponent={
+          <TouchableOpacity
+            onPress={() => navigation.navigate("ColorPaletteModal")}
+          >
+            <Text>Launch Modal</Text>
+          </TouchableOpacity>
         }
       />
     </View>
