@@ -7,19 +7,21 @@ import {
   TouchableOpacity,
   Alert,
 } from "react-native";
+import { ColorPalette } from "../ColorPalette/types";
 
-const ColorPaletteModal = () => {
+const ColorPaletteModal = ({ navigation }) => {
   const [name, setName] = useState("");
 
   const handleSubmit = () => {
     if (!name) {
       Alert.alert("Please enter a palette name");
     } else {
-      const newColorPalette = {
+      const newColorPalette: ColorPalette = {
         paletteName: name,
         colors: [],
       };
-      Alert.alert("Palette Name", name);
+
+      navigation.navigate("Home", { newColorPalette });
     }
   };
 
