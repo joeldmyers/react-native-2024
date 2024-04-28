@@ -45,3 +45,30 @@ React navigation and react native navigation are two nav libraries. React native
 https://reactnative.dev/docs/navigation
 
 They recommend starting with react navigation.
+
+React navigation is built-in with expo.
+
+```
+ npm i @react-navigation/native
+```
+
+and then
+
+```
+npx expo install react-native-gesture-handler react-native-reanimated react-native-screens react-native-safe-area-context @react-native-community/masked-view
+```
+
+then
+
+```
+npm i @react-navigation/stack
+```
+
+Re navigation, there's often a bottom nav and when you launch the app everything available on the root level menu gets launched, so be aware of this as far as data fetching etc. re: performance.
+
+Two main kinds of nav:
+
+- bottom nav
+- stack
+
+With web you use onClick, with mobile, we press, use touch. TouchableOpacity, TouchableWithoutFeedback, etc.
