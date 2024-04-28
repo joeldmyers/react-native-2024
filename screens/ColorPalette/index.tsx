@@ -1,5 +1,5 @@
 import { FlatList, SafeAreaView, View, Text, StyleSheet } from "react-native";
-import ColorBox from "../components/ColorBox";
+import ColorBox from "../../components/ColorBox";
 
 type Color = {
   colorName: string;

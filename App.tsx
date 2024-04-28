@@ -1,16 +1,8 @@
-import { Text } from "react-native";
-
 import { NavigationContainer } from "@react-navigation/native";
-
+import { createStackNavigator } from "@react-navigation/stack";
 import Home from "./screens/Home";
 import ColorPalette from "./screens/ColorPalette";
-
-import { createStackNavigator } from "@react-navigation/stack";
-
-export type RootStackParamList = {
-  Home: undefined; // undefined because we aren't passing any params to the home screen
-  ColorPalette: undefined;
-};
+import { RootStackParamList } from "./types";
 
 const Stack = createStackNavigator<RootStackParamList>();
 

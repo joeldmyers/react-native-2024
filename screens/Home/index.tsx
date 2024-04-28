@@ -1,15 +1,5 @@
 import { View, Text, TouchableOpacity } from "react-native";
-import { StackNavigationProp } from "@react-navigation/stack";
-import { RootStackParamList } from "../App";
-
-type ProfileScreenNavigationProp = StackNavigationProp<
-  RootStackParamList,
-  "Home"
->;
-
-type Props = {
-  navigation: ProfileScreenNavigationProp;
-};
+import { Props } from "./types";
 
 const Home = ({ navigation }: Props) => {
   return (
