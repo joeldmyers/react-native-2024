@@ -1,42 +1,44 @@
 # react-native-2024
 
-Notes
+## Notes
+
+My notes from following along with this class: https://frontendmasters.com/courses/react-native-v2/
 
 - View is like div
+
 - SafeAreaView - guaranteed to be below bar at top.
+
 - Scrollview - like div that you can scroll
+
 - Text - you have to wrap element in text to get text.
+
 - have to do this inline style for each component - StyleSheet.create({ })
 
-Use expo
+- Generally easier to use expo. Can eject if needed.
 
-Shake to open debugger.
+- Shake to open debugger. Can use debugger to see console.log
 
-Can do debugger to see console.log
+- Native styles don't have units. E.g., padding margin.
 
-Native styles don't have units. E.g., padding margin.
+- https://reactnative.dev/docs/view-style-props
 
-https://reactnative.dev/docs/view-style-props
+- Everything is flex.
 
-Everything is flex.
+- We Can use styled components! https://styled-components.com/docs/basics#react-native
 
-Can use styled components!
+- We can do multiple styles by passing in array (for cascading styles)
 
-https://styled-components.com/docs/basics#react-native
+- Colors can look different on iOS and android. Esp greens for some reason.
 
-can do multiple styles by passing in array (for cascading styles)
-
-Colors can look different on iOS and android. Esp greens for some reason.
-
-Never use 'map' to render array of items. This is for performance reasons.
+- Never use 'map' to render array of items. This is for performance reasons.
 
 Instead, use FlatList and SectionList.
 https://reactnative.dev/docs/flatlist
 https://reactnative.dev/docs/sectionlist
 
-section list is like a list that has a title and then sections.
+- section list is like a list that has a title and then sections.
 
-it seems like flatlist is a replacement for map generally.
+- it seems like flatlist is a replacement for map generally.
 
 ## Navigation
 
