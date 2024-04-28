@@ -1,4 +1,4 @@
-import { Color } from "./types";
+import { Color, ColorPalette } from "./types";
 
 export const SOLARIZED: Color[] = [
   { colorName: "Base03", hexCode: "#002b36" },
@@ -34,11 +34,6 @@ export const FEM: Color[] = [
   { colorName: "White", hexCode: "#ffffff" },
   { colorName: "Orange", hexCode: "#e66225" },
 ];
-
-type ColorPalette = {
-  paletteName: string;
-  colors: Color[];
-};
 
 export const ALL_COLORS: ColorPalette[] = [
   { paletteName: "Solarized", colors: SOLARIZED },
