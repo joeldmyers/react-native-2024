@@ -6,6 +6,7 @@ import { ColorPalette } from "../ColorPalette/types";
 
 const Home = ({ navigation }: Props) => {
   const [colorPalettes, setColorPalettes] = useState<ColorPalette[]>([]);
+  const [isRefreshing, setIsRefreshing] = useState<boolean>(true);
 
   useEffect(() => {
     const fetchColors = async () => {
@@ -15,9 +16,13 @@ const Home = ({ navigation }: Props) => {
       const resultJson = await result.json();
       console.log("RESULTS!", resultJson);
       setColorPalettes(resultJson);
+      setIsRefreshing(false);
     };
-    fetchColors();
-  }, []);
+
+    if (isRefreshing) {
+      fetchColors();
+    }
+  }, [isRefreshing]);
 
   return (
     <View>
@@ -38,8 +43,8 @@ const Home = ({ navigation }: Props) => {
         )}
         refreshControl={
           <RefreshControl
-            refreshing={!colorPalettes?.length}
-            onRefresh={() => {}}
+            refreshing={isRefreshing}
+            onRefresh={() => setIsRefreshing(true)}
           />
         }
       />
