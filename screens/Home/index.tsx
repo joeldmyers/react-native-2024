@@ -7,6 +7,7 @@ import {
 } from "react-native";
 import { Props } from "./types";
 import { ALL_COLORS } from "../ColorPalette/consts";
+import PalettePreview from "../../components/PalettePreview";
 
 const Home = ({ navigation }: Props) => {
   return (
@@ -16,16 +17,15 @@ const Home = ({ navigation }: Props) => {
         data={ALL_COLORS}
         keyExtractor={(item) => item.paletteName}
         renderItem={(data) => (
-          <TouchableOpacity
-            onPress={() =>
+          <PalettePreview
+            handlePress={() =>
               navigation.navigate("ColorPalette", {
                 paletteName: data.item.paletteName,
                 colors: data.item.colors,
               })
             }
-          >
-            <Text style={styles.headerText}>{data.item.paletteName}</Text>
-          </TouchableOpacity>
+            colorPalette={data.item}
+          />
         )}
       />
     </View>
