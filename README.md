@@ -91,8 +91,10 @@ Picker - looks very different on iOS vs Android.
 
 Switch is toggle.
 
+### Modal
+
 ### React Native Community
 
-Reliable 3rd party things.
+Reliable 3rd party resources.
 
 https://github.com/react-native-community
