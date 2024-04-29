@@ -19,10 +19,12 @@ const ColorPaletteModal = ({ navigation }) => {
   const handleSubmit = () => {
     if (!name) {
       Alert.alert("Please enter a palette name");
+    } else if (selectedColors.length < 3) {
+      Alert.alert("Please add at least 3 colors");
     } else {
       const newColorPalette: ColorPalette = {
         paletteName: name,
-        colors: [],
+        colors: selectedColors,
       };
 
       navigation.navigate("Home", { newColorPalette });
