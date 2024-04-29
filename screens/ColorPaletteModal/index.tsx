@@ -6,11 +6,15 @@ import {
   StyleSheet,
   TouchableOpacity,
   Alert,
+  Switch,
+  FlatList,
 } from "react-native";
-import { ColorPalette } from "../ColorPalette/types";
+import { Color, ColorPalette } from "../ColorPalette/types";
+import { COLORS_TO_CHOOSE_FROM } from "./consts";
 
 const ColorPaletteModal = ({ navigation }) => {
   const [name, setName] = useState("");
+  const [selectedColors, setSelectedColors] = useState<Color[]>([]);
 
   const handleSubmit = () => {
     if (!name) {
@@ -25,6 +29,17 @@ const ColorPaletteModal = ({ navigation }) => {
     }
   };
 
+  const handleValueChange = (value: boolean, color: Color) => {
+    if (value === true) {
+      setSelectedColors([...selectedColors, color]);
+    } else {
+      const updatedColors = selectedColors.filter(
+        (c) => c.colorName !== color.colorName,
+      );
+      setSelectedColors(updatedColors);
+    }
+  };
+
   return (
     <View style={styles.container}>
       <Text style={styles.headerText}>Enter Palette Name</Text>
@@ -34,6 +49,20 @@ const ColorPaletteModal = ({ navigation }) => {
         onChangeText={setName}
         placeholder="Palette Name"
       />
+      <FlatList
+        data={COLORS_TO_CHOOSE_FROM}
+        keyExtractor={(item) => item.colorName}
+        renderItem={({ item }) => (
+          <View style={styles.color}>
+            <Text>{item.colorName}</Text>
+            <Switch
+              value={selectedColors.some((c) => c.colorName === item.colorName)}
+              onValueChange={(selected) => handleValueChange(selected, item)}
+            />
+          </View>
+        )}
+      />
+
       <TouchableOpacity style={styles.button} onPress={handleSubmit}>
         <Text style={styles.buttonText}>Submit</Text>
       </TouchableOpacity>
@@ -68,6 +97,14 @@ const styles = StyleSheet.create({
   container: {
     padding: 20,
     flex: 1,
+  },
+  color: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    paddingVertical: 10,
+    borderBottomWidth: 1,
+    borderBottomColor: "grey",
   },
 });
 
