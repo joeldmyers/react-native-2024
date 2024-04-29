@@ -2,9 +2,8 @@
 
 Color Palette App:
 
-![IMG_1657](https://github.com/joeldmyers/react-native-2024/assets/4838984/b3ed52be-46d7-400c-b239-95b5ec68b1e4)
-![IMG_1658](https://github.com/joeldmyers/react-native-2024/assets/4838984/cc4f7bd2-2c29-4738-9c0b-8a8ad41907e6)
-<img src="https://github.com/joeldmyers/react-native-2024/assets/4838984/cc4f7bd2-2c29-4738-9c0b-8a8ad41907e6" width="48">
+<img src="https://github.com/joeldmyers/react-native-2024/assets/4838984/cc4f7bd2-2c29-4738-9c0b-8a8ad41907e6" width="300">
+<img src="https://github.com/joeldmyers/react-native-2024/assets/4838984/cc4f7bd2-2c29-4738-9c0b-8a8ad41907e6" width="300">
 
 ## Notes
 
