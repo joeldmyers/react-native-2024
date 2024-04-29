@@ -98,3 +98,11 @@ Switch is toggle.
 Reliable 3rd party resources.
 
 https://github.com/react-native-community
+
+## Animations
+
+No CSS. Can use Lottie.
+
+## Images
+
+Often use react-native-fast-image for better performance.
