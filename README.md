@@ -106,3 +106,11 @@ No CSS. Can use Lottie.
 ## Images
 
 Often use react-native-fast-image for better performance.
+
+## Codepush
+
+Send "over the air" for developers.
+
+## Fastlane
+
+Automating building and releasing app.
